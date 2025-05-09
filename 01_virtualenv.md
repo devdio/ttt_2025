@@ -101,7 +101,7 @@ uv sync
 ### uv python 관리
 ```
 uv python list
-uv python install
+uv python install 3.9 3.10 3.11
 ```
 
 
