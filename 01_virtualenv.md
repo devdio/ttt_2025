@@ -24,6 +24,16 @@ deactivate
 ```
 
 > 윈도우 터미널 : https://github.com/microsoft/terminal
+- 파이썬 특정 버전으로 가상 환경 만들기
+```
+mkdir test_project
+cd test_project
+py -3.12 -m venv .venv
+.\venv\Scripts\Activate.ps1
+```
+
+
+
 
 
 
