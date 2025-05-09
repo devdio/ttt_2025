@@ -35,7 +35,7 @@ py -3.12 -m venv .venv  #<<==
 # uv
 - Astral이 만든 uv는 2024년 초에 출시되어, pip, poetry, conda 등 다양한 도구들의 장점을 통합하고, Rust를 활용한 초고속 의존성 해석(Resolver)으로 큰 주목을 받고 있다.
 - Anthropic, OpenAI 를 포함한 실제 ML/DS(데이터 사이언스), 백엔드, 오픈소스 프로젝트 등 여러 분야에서 uv 도입 사례가 급격히 늘고 있다.
-> 사이트 : [https://www.datacamp.com/tutorial/python-uv](https://docs.astral.sh/uv/getting-started/installation/)
+> 사이트 : [[https://www.datacamp.com/tutorial/python-uv](https://docs.astral.sh/uv/getting-started/installation/)](https://docs.astral.sh/uv/getting-started/features/#scripts)
 
 - 설치 (관리자 권한으로 실행)
 ```sh
@@ -47,7 +47,9 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ```sh
 uv init test_project
 cd test_project
-  
+uv venv --python 3.12
+.venv/Scripts/activate.ps1
+
 test_project/
 ├── .python-version
 ├── .gitignore
@@ -59,7 +61,10 @@ test_project/
 *  pyproject.toml 은 의존성 및 프로젝트 메타데이터를 정의하는 핵심 파일입니다. 
 *  .venv 폴더는 아직 보이지 않을 수 있는데, 의존성을 추가하면 자동으로 생성됩니다. 
 ```
-
+- 가상환경
+```
+uv venv --python 3.12
+```
 - 패키지 설치
 ```
 uv add ruff==2.2.2
@@ -81,16 +86,22 @@ pip install "uvicorn[standard]
 ```
 uv export -o requirements.txt
 ```
-- 가상환경
-```
-uv venv --python 3.12
-```
+
 - 프로그램 실행
 ```
 uv run hello.py
+uv run python hello.py
+```
+- uv sync
+pyproject.toml 과 uv.lock 파일을 기준으로 가상환경 재생성 및 동기화
+```
+uv sync
 ```
 
-
-
+### uv python 관리
+```
+uv python list
+uv python install
+```
 
 
