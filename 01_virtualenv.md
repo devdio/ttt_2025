@@ -48,9 +48,9 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 uv init test_project
 cd test_project
 ```
-   *  .python-version을 통해 파이썬 버전이 고정됩니다. 
-   *  pyproject.toml 은 의존성 및 프로젝트 메타데이터를 정의하는 핵심 파일입니다. 
-   *  .venv 폴더는 아직 보이지 않을 수 있는데, 의존성을 추가하면 자동으로 생성됩니다. 
+     *  .python-version을 통해 파이썬 버전이 고정됩니다. 
+     *  pyproject.toml 은 의존성 및 프로젝트 메타데이터를 정의하는 핵심 파일입니다. 
+     *  .venv 폴더는 아직 보이지 않을 수 있는데, 의존성을 추가하면 자동으로 생성됩니다. 
 
 - 패키지 설치
 ```
