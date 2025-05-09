@@ -17,12 +17,13 @@ python3 -m venv venv
 
 # 가상환경 활성화
 .\venv\Scripts\Activate.ps1
+# source ./venv/Scripts/activate
 
 # 가상환경 비활성화
 deactivate
-
 ```
 
+> 윈도우 터미널 : https://github.com/microsoft/terminal
 
 
 
