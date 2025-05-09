@@ -47,7 +47,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ```sh
 uv init test_project
 cd test_project
-```
+  
 test_project/
 ├── .python-version
 ├── .gitignore
